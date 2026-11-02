@@ -1,7 +1,7 @@
 export type Lang = "en" | "es";
 
 const en = {
-  appName: "Lost Pet Scanner",
+  appName: "Lost Pet Finder",
   sampleBanner: "Sample data only. These are example listings, not real animals.",
   tagline: "We'll keep checking nearby shelters for you.",
   taglineSub: "Take a breath. Tell us about your pet and we'll watch for possible matches.",
@@ -83,7 +83,7 @@ const en = {
 };
 
 const es: typeof en = {
-  appName: "Escáner de Mascotas Perdidas",
+  appName: "Buscador de Mascotas Perdidas",
   sampleBanner: "Solo datos de muestra. Son ejemplos, no animales reales.",
   tagline: "Seguiremos revisando los refugios cercanos por ti.",
   taglineSub: "Respira. Cuéntanos sobre tu mascota y buscaremos posibles coincidencias.",

@@ -1,4 +1,4 @@
-# Lost Pet Shelter Scanner — Project Brief
+# Lost Pet Finder — Project Brief
 
 ## Background
 This started as a personal search for a friend's lost dog, Cy, in Bethesda, MD. A scheduled
