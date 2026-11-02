@@ -74,3 +74,12 @@ possible matches. Shelters use the app directly to post the animals they take in
 - Keep the owner flow simple and calm; users are stressed.
 - Mobile-first design.
 - Explain technical choices in plain language; the project owner is not a developer.
+
+## Build (MVP) — current state
+- Stack: Next.js 16 (App Router, `proxy.ts` is the middleware) on Vercel, Supabase (Postgres + PostGIS,
+  Auth, Storage), Stripe, Resend. Same server-side/service-role pattern as the RMU portal: RLS on, no policies.
+- `prototype/` = the clickable Vite prototype (sample data). Run: `cd prototype && npm run dev`.
+- `supabase/migrations/` = schema (shelters, intakes, searches, search_matches, payments, `find_matches()`).
+  NOT yet applied: needs a Supabase project. Env vars listed in `.env.example`.
+- `proxy.ts` = password gate for the private preview (`PREVIEW_GATE=on`, `SITE_PASSWORD`).
+- Build order: shelter side and owner side together, then alerts job, then Stripe, then launch prep.
