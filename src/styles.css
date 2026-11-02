@@ -30,3 +30,8 @@ button.active { background:var(--accent); color:#000; border-color:var(--accent)
 .steps { color:var(--muted); font-size:14px; }
 .price { font-size:28px; font-weight:700; }
 .strike { text-decoration:line-through; color:var(--muted); font-size:18px; margin-right:6px; }
+.step { display:flex; gap:14px; align-items:flex-start; }
+.num { flex:none; width:32px; height:32px; border-radius:50%; background:var(--accent); color:#000; font-weight:700; display:flex; align-items:center; justify-content:center; }
+.tag { display:inline-block; font-size:12px; padding:2px 8px; border-radius:99px; border:1px solid var(--border); color:var(--muted); margin-bottom:6px; margin-right:8px; }
+.tag.live { color:var(--accent); border-color:var(--accent); }
+.ext { color:var(--accent); font-size:15px; margin-right:12px; }

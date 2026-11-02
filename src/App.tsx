@@ -58,10 +58,29 @@ export default function App() {
 
         {screen === "home" && (
           <>
-            <h2>{t.tagline}</h2>
+            <h2 style={{ fontSize: 30, lineHeight: 1.2 }}>{t.tagline}</h2>
             <p className="sub">{t.taglineSub}</p>
-            <button className="big-choice" onClick={() => setScreen("pet")}>🐕 {t.iLostPet}</button>
-            <button className="big-choice" onClick={() => setScreen("shelter")}>🏠 {t.iAmShelter}</button>
+            <button className="primary" style={{ marginTop: 0 }} onClick={() => setScreen("pet")}>🐕 {t.iLostPet}</button>
+            <p className="muted" style={{ textAlign: "center" }}>{t.priceLine}</p>
+
+            <h2 style={{ marginTop: 32 }}>{t.howTitle}</h2>
+            {[[t.how1t, t.how1d], [t.how2t, t.how2d], [t.how3t, t.how3d]].map(([h, d], i) => (
+              <div key={i} className="card step"><div className="num">{i + 1}</div><div><strong>{h}</strong><div className="muted">{d}</div></div></div>
+            ))}
+
+            <h2 style={{ marginTop: 32 }}>{t.whereTitle}</h2>
+            <p className="sub">{t.whereSub}</p>
+            <div className="card"><span className="tag live">{t.liveNow}</span><strong>{t.src1t}</strong><div className="muted">{t.src1d}</div></div>
+            <div className="card"><span className="tag">{t.linksOnly}</span><strong>{t.src2t}</strong><div className="muted">{t.src2d}</div>
+              <a className="ext" href="https://www.facebook.com/search/groups?q=lost%20pets" target="_blank" rel="noreferrer">facebook.com ↗</a></div>
+            <div className="card"><span className="tag">{t.linksOnly}</span><strong>{t.src3t}</strong><div className="muted">{t.src3d}</div>
+              <a className="ext" href="https://petcolove.org/lost/" target="_blank" rel="noreferrer">Petco Love Lost ↗</a>{" "}
+              <a className="ext" href="https://www.pawboost.com" target="_blank" rel="noreferrer">PawBoost ↗</a></div>
+            <div className="card"><span className="tag live">{t.liveNow}</span><strong>{t.src4t}</strong><div className="muted">{t.src4d}</div></div>
+
+            <h2 style={{ marginTop: 32 }}>{t.forShelters}</h2>
+            <div className="card"><div className="muted" style={{ marginBottom: 12 }}>{t.forSheltersBody}</div>
+              <button onClick={() => setScreen("shelter")}>🏠 {t.shelterCta}</button></div>
           </>
         )}
 
